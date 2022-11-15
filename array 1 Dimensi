@@ -1,0 +1,37 @@
+
+#include <cstdlib>
+#include <conio.h>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+//deklarasi array satu dimensi
+
+int main() {
+	float Nilai[10];
+	int X, Y;
+	//mendeklarasi varaiabel untuk indeks pengulangan
+	
+	cout << "berapa jumlah data yang mau diisi [1..10]: "; 
+	cin >> Y;
+
+	for (X = 0; X < Y; X++)
+	{
+		cout << "Nilai Ke: " << X + 1 << " = ";
+		cin >> Nilai[X];
+	}
+//mengisi nilai array dalam elemen array yang diinginkan
+	cout << endl;
+	cout << setiosflags(ios::fixed);
+
+	for (X = 0; X < Y; X++)
+	{
+		cout << "Nilai Ke: " << setprecision(2) << X + 1 << " = " << Nilai[X] << endl;
+	}
+
+	cout << endl;
+
+	_getch();
+	return 0;
+}
